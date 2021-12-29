@@ -20,9 +20,10 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+        <!-- ↓ xml 파일이 소스랑 같은 디렉토리에 없을 경우 필요-->
         <property name="mapperLocations" value="classpath:/mappers/*.xml" />
         <property name="typeAliasesPackage" value="org.example.springboard" />
     </bean>
-
+    <!-- ↓ xml 연결고리 역할-->
     <mybatis-spring:scan base-package="org.example.springboard" />
 </beans>

@@ -14,8 +14,12 @@
     <context:component-scan base-package="org.example.springboard"/>
 
     <!-- Enables the Spring MVC @Controller programming model -->
-    <!-- @Controller 활성화 => 주소값 맵핑할 수 있다. -->
+    <!-- @Controller 활성화 => 주소값 맵핑할 수 있다. HandlerMapping 이 관리-->
     <mvc:annotation-driven/>
+
+    <!--res 폴더 쓰려면 /res 는 res 로 처리하자자, 모든요청을 dispatcherServlet 이 받기때문에,
+     location 에 준 /res/ 가 접근하도록 설정-->
+    <mvc:resources mapping="/res/**" location="/res/"/>
 
     <!--웹 서버 화면만들때는 필수-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

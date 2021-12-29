@@ -28,7 +28,7 @@
                         <th>날짜</th>
                     </tr>
                     <c:forEach items="${requestScope.list}" var="item">
-                    <tr>
+                    <tr class="record" data-iboard="${item.iboard}">
                         <td>${item.iboard}</td>
                         <td>${item.title}</td>
                         <td>${item.hits}</td>
@@ -40,5 +40,7 @@
             </c:otherwise>
         </c:choose>
     </div>
+    <script src="/res/js/board/list.js" ver="4" ></script>
 </body>
 </html>
+

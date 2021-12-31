@@ -5,5 +5,7 @@ import org.example.springboard.user.model.UserEntity;
 
 @Mapper
 public interface UserMapper {
+    int insUser(UserEntity entity);
     UserEntity selUser(UserEntity entity);
+
 }

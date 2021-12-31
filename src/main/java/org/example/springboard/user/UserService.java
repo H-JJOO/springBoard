@@ -37,4 +37,13 @@ public class UserService {
         }
         return 3;//비밀번호 틀림
     }
+
+    public int join(UserEntity entity) {
+        String plainPw = entity.getUpw();
+        String hashPw = BCrypt.hashpw(entity.getUpw(), BCrypt.gensalt());
+        entity.setUpw(hashPw);
+        int result = mapper.insUser(entity);
+        entity.setUpw(plainPw);
+        return result;
+    }
 }

@@ -10,9 +10,10 @@
 </head>
 <body>
     <h1>리스트</h1>
-    <div>
-        <a href="/board/write"><button>글쓰기</button></a>
-    </div>
+    <c:if test="${sessionScope.loginUser != null}">
+        <div><a href="/board/write"><button>글쓰기</button></a></div>
+    </c:if>
+
 
     <div>
         <c:choose>
@@ -24,6 +25,7 @@
                     <tr>
                         <th>번호</th>
                         <th>제목</th>
+                        <th>작성자</th>
                         <th>조회수</th>
                         <th>날짜</th>
                     </tr>
@@ -31,7 +33,8 @@
                     <tr class="record" data-iboard="${item.iboard}">
                         <td>${item.iboard}</td>
                         <td>${item.title}</td>
-                        <td>${item.hits}</td>
+                        <td>${item.writerNm}</td>
+                        <td>${item.hit}</td>
                         <td>${item.rdt}</td>
                     </tr>
                     </c:forEach>

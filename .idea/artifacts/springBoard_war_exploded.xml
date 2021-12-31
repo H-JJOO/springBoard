@@ -29,6 +29,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.30.RELEASE" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.4.5" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.4" />
         </element>
       </element>
     </root>

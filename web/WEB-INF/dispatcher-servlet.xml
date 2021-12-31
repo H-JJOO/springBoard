@@ -10,18 +10,18 @@
        http://www.springframework.org/schema/mvc
        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- 자바 파일에 있는 빈등록 애노테이션을 검색을 하고 찾은 다음에 빈등록을 해준다. 기준이되는 기본 패키지명을 설정 (Bean 등록 찾는거)-->
+    <!-- 자바 파일에 있는 빈등록 애노테이션을 검색을 하고 찾은 다음에 빈등록을 해준다. 기준이되는 기본 패키지명을 설정 (Bean 등록 찾는거), 추가-->
     <context:component-scan base-package="org.example.springboard"/>
 
     <!-- Enables the Spring MVC @Controller programming model -->
-    <!-- @Controller 활성화 => 주소값 맵핑할 수 있다. HandlerMapping 이 관리-->
+    <!-- @Controller 활성화 => 주소값 맵핑할 수 있다. HandlerMapping 이 관리, 추가-->
     <mvc:annotation-driven/>
 
     <!--res 폴더 쓰려면 /res 는 res 로 처리하자자, 모든요청을 dispatcherServlet 이 받기때문에,
-     location 에 준 /res/ 가 접근하도록 설정-->
+     location 에 준 /res/ 가 접근하도록 설정, 추가-->
     <mvc:resources mapping="/res/**" location="/res/"/>
 
-    <!--웹 서버 화면만들때는 필수-->
+    <!--웹 서버 화면만들때는 필수, 추가-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>

@@ -46,7 +46,6 @@ public class UserController {
         //이전 페이지로 이동
         String referer = req.getHeader("Referer");
         if (referer == null) { referer = "/user/login"; }
-        System.out.println("referer : " + referer);
         return "redirect:" + referer;
     }
 }

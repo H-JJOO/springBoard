@@ -36,6 +36,7 @@ public class BoardService {
     }
 
     public int updBoard(BoardEntity entity) {
+        entity.setWriter(userUtils.getLoginUSerPk());
         try { return mapper.updBoard(entity); }
         catch (Exception e) { e.printStackTrace(); }
         return 0;
@@ -45,11 +46,11 @@ public class BoardService {
     // 조회수 올리기
     public void updBoardHitsUp(BoardEntity entity) {
         entity.setHit(1);
-        //mapper.updBoard(entity);
-        updBoard(entity);
+        mapper.updBoard(entity);
     }
 
     public int delBoard(BoardEntity entity) {
+        entity.setWriter(userUtils.getLoginUSerPk());
         try { return mapper.delBoard(entity); }
         catch (Exception e) { e.printStackTrace(); }
         return 0;

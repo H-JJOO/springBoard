@@ -1,6 +1,7 @@
 package org.example.springboard.board;
 
 import com.sun.istack.internal.NotNull;
+import org.example.springboard.UserUtils;
 import org.example.springboard.board.model.BoardEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ public class BoardController {
 
     @Autowired
     private BoardService service;
+
 
     @GetMapping("/list")
     public void list(Model model) {

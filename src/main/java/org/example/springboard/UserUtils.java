@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpSession;
 
-@Component
+@Component//Bean 등록 (객체값 가져올수 있다)
 public class UserUtils {
 
     @Autowired

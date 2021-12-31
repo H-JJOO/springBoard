@@ -14,7 +14,6 @@
         <div><a href="/board/write"><button>글쓰기</button></a></div>
     </c:if>
 
-
     <div>
         <c:choose>
             <c:when test="${fn:length(requestScope.list) == 0}">

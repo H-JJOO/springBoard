@@ -4,9 +4,9 @@
 
     <insert id="insBoard">
     INSERT INTO t_board
-        (title, ctnt)
+        (title, ctnt, writer)
     VALUES
-        (#{title}, #{ctnt})
+        (#{title}, #{ctnt}, ${writer})
     </insert>
 
     <select id="selBoardList" resultType="BoardVo">
@@ -44,10 +44,13 @@
             </otherwise>
         </choose>
         WHERE iboard = ${iboard}
+        <if test=" hit != 1">
+            AND writer = ${writer}
+        </if>
     </update>
 
     <delete id="delBoard">
         DELETE FROM t_board
-        WHERE iboard = ${iboard}
+        WHERE iboard = ${iboard} AND writer = ${writer}
     </delete>
 </mapper>

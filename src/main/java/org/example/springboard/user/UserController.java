@@ -55,7 +55,6 @@ public class UserController {
                     return "redirect:/board/list";
                 }
                 return "redirect:/user/login";
-
         }
         reAttr.addFlashAttribute("msg", "회원가입에 실패하였습니다.");
         return "redirect:/user/join";

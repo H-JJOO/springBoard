@@ -7,5 +7,4 @@ import org.example.springboard.user.model.UserEntity;
 public interface UserMapper {
     int insUser(UserEntity entity);
     UserEntity selUser(UserEntity entity);
-
 }

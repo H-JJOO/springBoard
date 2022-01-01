@@ -40,7 +40,6 @@ public class BoardService {
         try { return mapper.updBoard(entity); }
         catch (Exception e) { e.printStackTrace(); }
         return 0;
-
     }
 
     // 조회수 올리기

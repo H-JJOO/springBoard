@@ -23,6 +23,7 @@
 
     <!--웹 서버 화면만들때는 필수, 추가-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--SETTER 메소드 이용, value 에 올수 있는 타입 원시타입 + String, String 을 제외한 참조타입은 ref 로 줘야한다.-->
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>

@@ -27,7 +27,7 @@
         <url-pattern>/</url-pattern>
         <!--/ 로 변경-->
     </servlet-mapping>
-    <!-- filter 추가 POST 한글 안깨지게-->
+    <!-- filter 추가 , 외부에 위치, Spring 진입 전, 한글 안깨지게-->
     <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
